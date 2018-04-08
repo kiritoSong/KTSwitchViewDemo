@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5FE32D832079ED430078C34C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE32D822079ED430078C34C /* AppDelegate.m */; };
+		5FE32D862079ED430078C34C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE32D852079ED430078C34C /* ViewController.m */; };
+		5FE32D892079ED430078C34C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FE32D872079ED430078C34C /* Main.storyboard */; };
+		5FE32D8B2079ED430078C34C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FE32D8A2079ED430078C34C /* Assets.xcassets */; };
+		5FE32D8E2079ED430078C34C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FE32D8C2079ED430078C34C /* LaunchScreen.storyboard */; };
+		5FE32D912079ED430078C34C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE32D902079ED430078C34C /* main.m */; };
+		5FE32D9B2079ED430078C34C /* KTSwitchViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE32D9A2079ED430078C34C /* KTSwitchViewDemoTests.m */; };
+		5FE32DA62079ED430078C34C /* KTSwitchViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE32DA52079ED430078C34C /* KTSwitchViewDemoUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5FE32D972079ED430078C34C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5FE32D762079ED430078C34C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FE32D7D2079ED430078C34C;
+			remoteInfo = KTSwitchViewDemo;
+		};
+		5FE32DA22079ED430078C34C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5FE32D762079ED430078C34C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FE32D7D2079ED430078C34C;
+			remoteInfo = KTSwitchViewDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5FE32D7E2079ED430078C34C /* KTSwitchViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTSwitchViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FE32D812079ED430078C34C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5FE32D822079ED430078C34C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5FE32D842079ED430078C34C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5FE32D852079ED430078C34C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5FE32D882079ED430078C34C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5FE32D8A2079ED430078C34C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5FE32D8D2079ED430078C34C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5FE32D8F2079ED430078C34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FE32D902079ED430078C34C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5FE32D962079ED430078C34C /* KTSwitchViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTSwitchViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FE32D9A2079ED430078C34C /* KTSwitchViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTSwitchViewDemoTests.m; sourceTree = "<group>"; };
+		5FE32D9C2079ED430078C34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FE32DA12079ED430078C34C /* KTSwitchViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTSwitchViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FE32DA52079ED430078C34C /* KTSwitchViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTSwitchViewDemoUITests.m; sourceTree = "<group>"; };
+		5FE32DA72079ED430078C34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5FE32D7B2079ED430078C34C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FE32D932079ED430078C34C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FE32D9E2079ED430078C34C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5FE32D752079ED430078C34C = {
+			isa = PBXGroup;
+			children = (
+				5FE32D802079ED430078C34C /* KTSwitchViewDemo */,
+				5FE32D992079ED430078C34C /* KTSwitchViewDemoTests */,
+				5FE32DA42079ED430078C34C /* KTSwitchViewDemoUITests */,
+				5FE32D7F2079ED430078C34C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5FE32D7F2079ED430078C34C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5FE32D7E2079ED430078C34C /* KTSwitchViewDemo.app */,
+				5FE32D962079ED430078C34C /* KTSwitchViewDemoTests.xctest */,
+				5FE32DA12079ED430078C34C /* KTSwitchViewDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5FE32D802079ED430078C34C /* KTSwitchViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				5FE32D812079ED430078C34C /* AppDelegate.h */,
+				5FE32D822079ED430078C34C /* AppDelegate.m */,
+				5FE32D842079ED430078C34C /* ViewController.h */,
+				5FE32D852079ED430078C34C /* ViewController.m */,
+				5FE32D872079ED430078C34C /* Main.storyboard */,
+				5FE32D8A2079ED430078C34C /* Assets.xcassets */,
+				5FE32D8C2079ED430078C34C /* LaunchScreen.storyboard */,
+				5FE32D8F2079ED430078C34C /* Info.plist */,
+				5FE32D902079ED430078C34C /* main.m */,
+			);
+			path = KTSwitchViewDemo;
+			sourceTree = "<group>";
+		};
+		5FE32D992079ED430078C34C /* KTSwitchViewDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				5FE32D9A2079ED430078C34C /* KTSwitchViewDemoTests.m */,
+				5FE32D9C2079ED430078C34C /* Info.plist */,
+			);
+			path = KTSwitchViewDemoTests;
+			sourceTree = "<group>";
+		};
+		5FE32DA42079ED430078C34C /* KTSwitchViewDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5FE32DA52079ED430078C34C /* KTSwitchViewDemoUITests.m */,
+				5FE32DA72079ED430078C34C /* Info.plist */,
+			);
+			path = KTSwitchViewDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5FE32D7D2079ED430078C34C /* KTSwitchViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FE32DAA2079ED430078C34C /* Build configuration list for PBXNativeTarget "KTSwitchViewDemo" */;
+			buildPhases = (
+				5FE32D7A2079ED430078C34C /* Sources */,
+				5FE32D7B2079ED430078C34C /* Frameworks */,
+				5FE32D7C2079ED430078C34C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KTSwitchViewDemo;
+			productName = KTSwitchViewDemo;
+			productReference = 5FE32D7E2079ED430078C34C /* KTSwitchViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5FE32D952079ED430078C34C /* KTSwitchViewDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FE32DAD2079ED430078C34C /* Build configuration list for PBXNativeTarget "KTSwitchViewDemoTests" */;
+			buildPhases = (
+				5FE32D922079ED430078C34C /* Sources */,
+				5FE32D932079ED430078C34C /* Frameworks */,
+				5FE32D942079ED430078C34C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FE32D982079ED430078C34C /* PBXTargetDependency */,
+			);
+			name = KTSwitchViewDemoTests;
+			productName = KTSwitchViewDemoTests;
+			productReference = 5FE32D962079ED430078C34C /* KTSwitchViewDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5FE32DA02079ED430078C34C /* KTSwitchViewDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FE32DB02079ED430078C34C /* Build configuration list for PBXNativeTarget "KTSwitchViewDemoUITests" */;
+			buildPhases = (
+				5FE32D9D2079ED430078C34C /* Sources */,
+				5FE32D9E2079ED430078C34C /* Frameworks */,
+				5FE32D9F2079ED430078C34C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FE32DA32079ED430078C34C /* PBXTargetDependency */,
+			);
+			name = KTSwitchViewDemoUITests;
+			productName = KTSwitchViewDemoUITests;
+			productReference = 5FE32DA12079ED430078C34C /* KTSwitchViewDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5FE32D762079ED430078C34C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = kirito_song;
+				TargetAttributes = {
+					5FE32D7D2079ED430078C34C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					5FE32D952079ED430078C34C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5FE32D7D2079ED430078C34C;
+					};
+					5FE32DA02079ED430078C34C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5FE32D7D2079ED430078C34C;
+					};
+				};
+			};
+			buildConfigurationList = 5FE32D792079ED430078C34C /* Build configuration list for PBXProject "KTSwitchViewDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5FE32D752079ED430078C34C;
+			productRefGroup = 5FE32D7F2079ED430078C34C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5FE32D7D2079ED430078C34C /* KTSwitchViewDemo */,
+				5FE32D952079ED430078C34C /* KTSwitchViewDemoTests */,
+				5FE32DA02079ED430078C34C /* KTSwitchViewDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5FE32D7C2079ED430078C34C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FE32D8E2079ED430078C34C /* LaunchScreen.storyboard in Resources */,
+				5FE32D8B2079ED430078C34C /* Assets.xcassets in Resources */,
+				5FE32D892079ED430078C34C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FE32D942079ED430078C34C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FE32D9F2079ED430078C34C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5FE32D7A2079ED430078C34C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FE32D862079ED430078C34C /* ViewController.m in Sources */,
+				5FE32D912079ED430078C34C /* main.m in Sources */,
+				5FE32D832079ED430078C34C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FE32D922079ED430078C34C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FE32D9B2079ED430078C34C /* KTSwitchViewDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FE32D9D2079ED430078C34C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FE32DA62079ED430078C34C /* KTSwitchViewDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5FE32D982079ED430078C34C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5FE32D7D2079ED430078C34C /* KTSwitchViewDemo */;
+			targetProxy = 5FE32D972079ED430078C34C /* PBXContainerItemProxy */;
+		};
+		5FE32DA32079ED430078C34C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5FE32D7D2079ED430078C34C /* KTSwitchViewDemo */;
+			targetProxy = 5FE32DA22079ED430078C34C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5FE32D872079ED430078C34C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FE32D882079ED430078C34C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5FE32D8C2079ED430078C34C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FE32D8D2079ED430078C34C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5FE32DA82079ED430078C34C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5FE32DA92079ED430078C34C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5FE32DAB2079ED430078C34C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QWDT94UJRT;
+				INFOPLIST_FILE = KTSwitchViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "kirito-song.KTSwitchViewDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5FE32DAC2079ED430078C34C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QWDT94UJRT;
+				INFOPLIST_FILE = KTSwitchViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "kirito-song.KTSwitchViewDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5FE32DAE2079ED430078C34C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QWDT94UJRT;
+				INFOPLIST_FILE = KTSwitchViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "kirito-song.KTSwitchViewDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KTSwitchViewDemo.app/KTSwitchViewDemo";
+			};
+			name = Debug;
+		};
+		5FE32DAF2079ED430078C34C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QWDT94UJRT;
+				INFOPLIST_FILE = KTSwitchViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "kirito-song.KTSwitchViewDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KTSwitchViewDemo.app/KTSwitchViewDemo";
+			};
+			name = Release;
+		};
+		5FE32DB12079ED430078C34C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QWDT94UJRT;
+				INFOPLIST_FILE = KTSwitchViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "kirito-song.KTSwitchViewDemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KTSwitchViewDemo;
+			};
+			name = Debug;
+		};
+		5FE32DB22079ED430078C34C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QWDT94UJRT;
+				INFOPLIST_FILE = KTSwitchViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "kirito-song.KTSwitchViewDemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KTSwitchViewDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5FE32D792079ED430078C34C /* Build configuration list for PBXProject "KTSwitchViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FE32DA82079ED430078C34C /* Debug */,
+				5FE32DA92079ED430078C34C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FE32DAA2079ED430078C34C /* Build configuration list for PBXNativeTarget "KTSwitchViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FE32DAB2079ED430078C34C /* Debug */,
+				5FE32DAC2079ED430078C34C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FE32DAD2079ED430078C34C /* Build configuration list for PBXNativeTarget "KTSwitchViewDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FE32DAE2079ED430078C34C /* Debug */,
+				5FE32DAF2079ED430078C34C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FE32DB02079ED430078C34C /* Build configuration list for PBXNativeTarget "KTSwitchViewDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FE32DB12079ED430078C34C /* Debug */,
+				5FE32DB22079ED430078C34C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5FE32D762079ED430078C34C /* Project object */;
+}
