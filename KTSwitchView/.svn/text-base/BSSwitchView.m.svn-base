@@ -1,0 +1,269 @@
+//
+//  BSMineTimeOrderSwichView.m
+//  BaiSongInternational
+//
+//  Created by 刘嵩野 on 2018/4/3.
+//  Copyright © 2018年 maqihan. All rights reserved.
+//
+
+#import "BSSwitchView.h"
+#import "BSSwitchViewDelayOperation.h"
+#import <Masonry.h>
+
+@interface BSSwitchView()
+{
+    NSString * _selected_contentText;
+    NSString * _contentText;
+    UIImage * _selected_img;
+    UIImage * _img;
+    UIColor * _selected_textColor;
+    UIColor * _textColor;
+    UIColor * _selected_bgcolor;
+    UIColor * _bgcolor;
+}
+@property (nonatomic) UIImageView * imgView;
+@property (nonatomic) UILabel * contentLab;
+@property (nonatomic) UILabel * selected_contentLab;
+@property (nonatomic) NSOperationQueue * queue;
+@end
+
+@implementation BSSwitchView
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+
+        [self commonInit];
+        
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureEvent)];
+        [self addGestureRecognizer:tapGesture];
+        
+        self.selected = NO;
+
+    }
+    return self;
+}
+
+- (void)commonInit {
+    self.queue = [[NSOperationQueue alloc]init];
+    //        self.queue.maxConcurrentOperationCount = 3;//感觉3个够用了、除非有逗比一直切着玩会有点延迟
+    self.eventInterval = 0;
+    self.delayTime = 0;
+    [self setBgcolor:[UIColor grayColor] style:BSSwitchViewStyle_Default|BSSwitchViewStyle_Selected];
+    [self setTextColor:[UIColor blackColor] style:BSSwitchViewStyle_Default|BSSwitchViewStyle_Selected];
+    [self setContentText:@"开" style:BSSwitchViewStyle_Default];
+    [self setContentText:@"关" style:BSSwitchViewStyle_Selected];
+    
+    [self addSubview:self.contentLab];
+    [self addSubview:self.selected_contentLab];
+    [self addSubview:self.imgView];
+}
+
+
+- (void)tapGestureEvent {
+    if (self.userInteractionEnabled == NO) {
+        return;
+    }
+    if (self.eventInterval > 0) {
+        self.userInteractionEnabled = NO;
+        [self performSelector:@selector(func) withObject:nil afterDelay:self.eventInterval];
+    }
+    
+    self.selected =!self.selected;
+
+}
+
+- (void)func {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.userInteractionEnabled = YES;
+    });
+}
+
+
+
+#pragma mark - setter && getter
+- (void)setSelected:(BOOL)selected {
+    
+    
+    _selected = selected;
+    
+    if ([self.delegate respondsToSelector:@selector(BSSwichViewDidChange:)]) {
+        [self.delegate BSSwichViewDidChange:self];
+    }
+
+    [self setNeedsUpdateConstraints];
+    [self updateConstraintsIfNeeded];
+    if (selected) {
+        self.backgroundColor = _selected_bgcolor;
+        self.imgView.image = _selected_img;
+        [self.imgView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self);
+            make.centerY.equalTo(self);
+            make.width.height.mas_equalTo(self.mas_height);
+        }];
+    }else {
+        self.backgroundColor = _bgcolor;
+        self.imgView.image = _img;
+        [self.imgView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self);
+            make.centerY.equalTo(self);
+            make.width.height.mas_equalTo(self.mas_height);
+        }];
+    }
+    
+    static dispatch_once_t onceToken;
+    if (onceToken != 0) {
+        [UIView animateWithDuration:0.3 animations:^{
+            [self layoutIfNeeded];
+        }];
+    }else {
+        [self layoutIfNeeded];
+        onceToken = 1;
+    }
+    
+    self.contentLab.hidden = selected;
+    self.selected_contentLab.hidden = !selected;
+    
+    
+    if (self.delayTime > 0) {
+        //取消之前的操作
+        [self.queue cancelAllOperations];
+        BSSwitchViewDelayOperation * operation = [BSSwitchViewDelayOperation delayTime:self.delayTime finishBlock:^{
+            [self callDelayDelegate];
+        }];
+        [self.queue addOperation:operation];
+    }
+    
+}
+
+- (void)callDelayDelegate {
+    
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        if ([self.delegate respondsToSelector:@selector(BSSwichViewDidDelayChange:)]) {
+            [self.delegate BSSwichViewDidDelayChange:self];
+        }
+    }];
+}
+
+
+- (void)setBgcolor:(UIColor *)bgcolor style:(BSSwitchViewStyle)style {
+    if (style & BSSwitchViewStyle_Default) {
+        _bgcolor = bgcolor;
+    }
+    
+    if (style & BSSwitchViewStyle_Selected) {
+        _selected_bgcolor = bgcolor;
+    }
+    
+    if (self.selected) {
+        self.backgroundColor = _selected_bgcolor;
+    }else {
+        self.backgroundColor = _bgcolor;
+    }
+}
+
+
+
+- (void)setTextColor:(UIColor *)textColor style:(BSSwitchViewStyle)style {
+    if (style & BSSwitchViewStyle_Default) {
+        _textColor = textColor;
+        self.contentLab.textColor = textColor;
+    }
+    
+    if (style & BSSwitchViewStyle_Selected) {
+        _selected_textColor = textColor;
+        self.selected_contentLab.textColor = textColor;
+    }
+}
+
+
+- (void)setImage:(UIImage *)img style:(BSSwitchViewStyle)style {
+    if (style & BSSwitchViewStyle_Default) {
+        _img = img;
+    }
+    
+    if (style & BSSwitchViewStyle_Selected) {
+        _selected_img = img;
+    }
+    
+    if (self.selected) {
+        self.imgView.image = _selected_img;
+    }else {
+        self.imgView.image = _img;
+    }
+}
+
+
+- (void)setContentText:(NSString *)contentText style:(BSSwitchViewStyle)style {
+    if (style & BSSwitchViewStyle_Default) {
+        _contentText = contentText;
+        self.contentLab.text = contentText;
+    }
+    
+    if (style & BSSwitchViewStyle_Selected) {
+        _selected_contentText = contentText;
+        self.selected_contentLab.text = contentText;
+    }
+    
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    [self setCornerRadius:self.frame.size.height/2];
+    static float width;
+    if (self.frame.size.width != width) {
+        width =self.frame.size.width;
+        [self.contentLab mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(self);
+            make.right.mas_equalTo(self.imgView.mas_left).offset(-2.5f);
+            make.width.mas_equalTo(width - 8 - self.frame.size.height);
+        }];
+        
+        [self.selected_contentLab mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(self);
+            make.left.mas_equalTo(self.imgView.mas_right).offset(2.5f);
+            make.width.equalTo(self.contentLab);
+        }];
+    }
+}
+
+- (void)setCornerRadius:(CGFloat)cornerRadius {
+    self.layer.cornerRadius = cornerRadius;
+    self.layer.masksToBounds = YES;
+    self.imgView.layer.cornerRadius = cornerRadius;
+    self.imgView.layer.masksToBounds = YES;
+}
+
+
+- (void)setFont:(UIFont *)font {
+    _font = font;
+    self.contentLab.font = font;
+    self.selected_contentLab.font = font;
+}
+
+- (UILabel *)contentLab {
+    if (!_contentLab) {
+        _contentLab = [UILabel new];
+        _contentLab.hidden = NO;
+        _contentLab.textAlignment = NSTextAlignmentCenter;
+    }
+    return _contentLab;
+}
+
+- (UILabel *)selected_contentLab {
+    if (!_selected_contentLab) {
+        _selected_contentLab = [UILabel new];
+        _selected_contentLab.hidden = YES;
+        _selected_contentLab.textAlignment = NSTextAlignmentCenter;
+    }
+    return _selected_contentLab;
+}
+
+- (UIImageView *)imgView {
+    if (!_imgView) {
+        _imgView = [UIImageView new];
+    }
+    return _imgView;
+}
+@end

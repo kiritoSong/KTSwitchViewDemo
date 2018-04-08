@@ -1,0 +1,38 @@
+//
+//  BSDelayOperation.m
+//  BaiSongInternational
+//
+//  Created by 刘嵩野 on 2018/4/4.
+//  Copyright © 2018年 maqihan. All rights reserved.
+//
+
+#import "BSSwitchViewDelayOperation.h"
+
+@interface BSSwitchViewDelayOperation ()
+
+@property(copy,nonatomic) void(^finishBlock)(void);
+@property (nonatomic, assign) NSTimeInterval delay;
+
+@end
+
+@implementation BSSwitchViewDelayOperation
+
+- (void)main {
+    if(self.isCancelled){
+        return;
+    }
+    sleep(self.delay);
+    if(self.isCancelled){
+        return;
+    }
+    self.finishBlock();
+}
+
++ (instancetype)delayTime:(NSTimeInterval)delay finishBlock:(void(^)(void))finishBlock {
+    
+    BSSwitchViewDelayOperation * operation = [[BSSwitchViewDelayOperation alloc]init];
+    operation.finishBlock = finishBlock;
+    operation.delay = delay;
+    return operation;
+}
+@end

@@ -15,6 +15,13 @@
 		5FE32D912079ED430078C34C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE32D902079ED430078C34C /* main.m */; };
 		5FE32D9B2079ED430078C34C /* KTSwitchViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE32D9A2079ED430078C34C /* KTSwitchViewDemoTests.m */; };
 		5FE32DA62079ED430078C34C /* KTSwitchViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE32DA52079ED430078C34C /* KTSwitchViewDemoUITests.m */; };
+		5FE32DB82079EDF60078C34C /* KTSwitchViewDelayOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE32DB52079EDF50078C34C /* KTSwitchViewDelayOperation.m */; };
+		5FE32DB92079EDF60078C34C /* KTSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE32DB62079EDF50078C34C /* KTSwitchView.m */; };
+		5FE32DC6207A02FB0078C34C /* mine_timeorder_unlock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FE32DC2207A02FB0078C34C /* mine_timeorder_unlock@2x.png */; };
+		5FE32DC7207A02FB0078C34C /* mine_timeorder_lock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FE32DC3207A02FB0078C34C /* mine_timeorder_lock@2x.png */; };
+		5FE32DC8207A02FB0078C34C /* mine_timeorder_lock@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FE32DC4207A02FB0078C34C /* mine_timeorder_lock@3x.png */; };
+		5FE32DC9207A02FB0078C34C /* mine_timeorder_unlock@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FE32DC5207A02FB0078C34C /* mine_timeorder_unlock@3x.png */; };
+		865B0D9401D8B54CD45F6F3E /* libPods-KTSwitchViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E663D1D59B0E74ED82A7F0F5 /* libPods-KTSwitchViewDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,17 @@
 		5FE32DA12079ED430078C34C /* KTSwitchViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTSwitchViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FE32DA52079ED430078C34C /* KTSwitchViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTSwitchViewDemoUITests.m; sourceTree = "<group>"; };
 		5FE32DA72079ED430078C34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FE32DB42079EDF50078C34C /* KTSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTSwitchView.h; sourceTree = "<group>"; };
+		5FE32DB52079EDF50078C34C /* KTSwitchViewDelayOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTSwitchViewDelayOperation.m; sourceTree = "<group>"; };
+		5FE32DB62079EDF50078C34C /* KTSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTSwitchView.m; sourceTree = "<group>"; };
+		5FE32DB72079EDF50078C34C /* KTSwitchViewDelayOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTSwitchViewDelayOperation.h; sourceTree = "<group>"; };
+		5FE32DC2207A02FB0078C34C /* mine_timeorder_unlock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_timeorder_unlock@2x.png"; sourceTree = "<group>"; };
+		5FE32DC3207A02FB0078C34C /* mine_timeorder_lock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_timeorder_lock@2x.png"; sourceTree = "<group>"; };
+		5FE32DC4207A02FB0078C34C /* mine_timeorder_lock@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_timeorder_lock@3x.png"; sourceTree = "<group>"; };
+		5FE32DC5207A02FB0078C34C /* mine_timeorder_unlock@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_timeorder_unlock@3x.png"; sourceTree = "<group>"; };
+		80D4914E5AE97D5032DEAD62 /* Pods-KTSwitchViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KTSwitchViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KTSwitchViewDemo/Pods-KTSwitchViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A6359DE7849AC20F85991B0E /* Pods-KTSwitchViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KTSwitchViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-KTSwitchViewDemo/Pods-KTSwitchViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		E663D1D59B0E74ED82A7F0F5 /* libPods-KTSwitchViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KTSwitchViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				865B0D9401D8B54CD45F6F3E /* libPods-KTSwitchViewDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +97,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		404E0923BED16BB0E5AB0A4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E663D1D59B0E74ED82A7F0F5 /* libPods-KTSwitchViewDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5FE32D752079ED430078C34C = {
 			isa = PBXGroup;
 			children = (
+				5FE32DB32079EDF50078C34C /* KTSwitchView */,
 				5FE32D802079ED430078C34C /* KTSwitchViewDemo */,
 				5FE32D992079ED430078C34C /* KTSwitchViewDemoTests */,
 				5FE32DA42079ED430078C34C /* KTSwitchViewDemoUITests */,
 				5FE32D7F2079ED430078C34C /* Products */,
+				A1406E0C0B73F15AAA0CE7C9 /* Pods */,
+				404E0923BED16BB0E5AB0A4F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +131,10 @@
 		5FE32D802079ED430078C34C /* KTSwitchViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5FE32DC3207A02FB0078C34C /* mine_timeorder_lock@2x.png */,
+				5FE32DC4207A02FB0078C34C /* mine_timeorder_lock@3x.png */,
+				5FE32DC2207A02FB0078C34C /* mine_timeorder_unlock@2x.png */,
+				5FE32DC5207A02FB0078C34C /* mine_timeorder_unlock@3x.png */,
 				5FE32D812079ED430078C34C /* AppDelegate.h */,
 				5FE32D822079ED430078C34C /* AppDelegate.m */,
 				5FE32D842079ED430078C34C /* ViewController.h */,
@@ -132,6 +166,26 @@
 			path = KTSwitchViewDemoUITests;
 			sourceTree = "<group>";
 		};
+		5FE32DB32079EDF50078C34C /* KTSwitchView */ = {
+			isa = PBXGroup;
+			children = (
+				5FE32DB42079EDF50078C34C /* KTSwitchView.h */,
+				5FE32DB62079EDF50078C34C /* KTSwitchView.m */,
+				5FE32DB72079EDF50078C34C /* KTSwitchViewDelayOperation.h */,
+				5FE32DB52079EDF50078C34C /* KTSwitchViewDelayOperation.m */,
+			);
+			path = KTSwitchView;
+			sourceTree = "<group>";
+		};
+		A1406E0C0B73F15AAA0CE7C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				80D4914E5AE97D5032DEAD62 /* Pods-KTSwitchViewDemo.debug.xcconfig */,
+				A6359DE7849AC20F85991B0E /* Pods-KTSwitchViewDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FE32DAA2079ED430078C34C /* Build configuration list for PBXNativeTarget "KTSwitchViewDemo" */;
 			buildPhases = (
+				A198BE17ACE96ADE12ACB2F7 /* [CP] Check Pods Manifest.lock */,
 				5FE32D7A2079ED430078C34C /* Sources */,
 				5FE32D7B2079ED430078C34C /* Frameworks */,
 				5FE32D7C2079ED430078C34C /* Resources */,
+				951A541E9EC92CD271840CC8 /* [CP] Embed Pods Frameworks */,
+				2DC150B59EDDC92328791D93 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,9 +295,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FE32DC7207A02FB0078C34C /* mine_timeorder_lock@2x.png in Resources */,
 				5FE32D8E2079ED430078C34C /* LaunchScreen.storyboard in Resources */,
 				5FE32D8B2079ED430078C34C /* Assets.xcassets in Resources */,
+				5FE32DC9207A02FB0078C34C /* mine_timeorder_unlock@3x.png in Resources */,
+				5FE32DC8207A02FB0078C34C /* mine_timeorder_lock@3x.png in Resources */,
 				5FE32D892079ED430078C34C /* Main.storyboard in Resources */,
+				5FE32DC6207A02FB0078C34C /* mine_timeorder_unlock@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,14 +321,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2DC150B59EDDC92328791D93 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KTSwitchViewDemo/Pods-KTSwitchViewDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		951A541E9EC92CD271840CC8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KTSwitchViewDemo/Pods-KTSwitchViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A198BE17ACE96ADE12ACB2F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KTSwitchViewDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5FE32D7A2079ED430078C34C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FE32DB92079EDF60078C34C /* KTSwitchView.m in Sources */,
 				5FE32D862079ED430078C34C /* ViewController.m in Sources */,
 				5FE32D912079ED430078C34C /* main.m in Sources */,
 				5FE32D832079ED430078C34C /* AppDelegate.m in Sources */,
+				5FE32DB82079EDF60078C34C /* KTSwitchViewDelayOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +542,7 @@
 		};
 		5FE32DAB2079ED430078C34C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80D4914E5AE97D5032DEAD62 /* Pods-KTSwitchViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,6 +557,7 @@
 		};
 		5FE32DAC2079ED430078C34C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6359DE7849AC20F85991B0E /* Pods-KTSwitchViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

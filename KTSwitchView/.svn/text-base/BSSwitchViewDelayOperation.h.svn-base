@@ -1,0 +1,19 @@
+//
+//  BSDelayOperation.h
+//  BaiSongInternational
+//
+//  Created by 刘嵩野 on 2018/4/4.
+//  Copyright © 2018年 maqihan. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+/**
+ * 可以延迟调用、并且自动检测取消的operation?
+ * 大概这意思
+ */
+
+@interface BSSwitchViewDelayOperation : NSOperation
+
++ (instancetype)delayTime:(NSTimeInterval)delay finishBlock:(void(^)(void))finishBlock;
+@end
