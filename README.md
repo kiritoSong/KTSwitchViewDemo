@@ -1,15 +1,15 @@
 # KTSwitchViewDemo
 [《简书链接》](https://www.jianshu.com/p/6788fbfcfa47)
-####效果图如下、有需要可以自取。
+#### 效果图如下、有需要可以自取。
 ![](https://upload-images.jianshu.io/upload_images/1552225-163b2bf325c56034.gif?imageMogr2/auto-orient/strip)
 ***
-####主要写了以下的几个功能
+#### 主要写了以下的几个功能
   - 可以设置X秒内不允许点击。
   - 可以设置X秒后无新动作再的捕获回调。
   - 自定义文字颜色、大小
   - 自定义背景色
   - 自定义图片
-#####.h文件如下
+##### .h文件如下
 ```
 //
 //  KTSwitchView.h
@@ -65,7 +65,7 @@ typedef NS_OPTIONS(NSUInteger, KTSwitchViewStyle) {
 
 
 ***
-####需要注意的是
+#### 需要注意的是
 - 布局使用的是`Masonry`、需要项目支持。
 - 延迟回调用的是NSOperation队列、每次点击废弃队列中的旧操作。
 其实也可以(或者说从场景上更适合)用定时器、但是个人情感上不太喜欢不断的开关某个定时器。
