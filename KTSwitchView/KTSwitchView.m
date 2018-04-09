@@ -18,6 +18,8 @@
     UIImage * _img;
     UIColor * _selected_textColor;
     UIColor * _textColor;
+    float _width;
+    dispatch_once_t onceToken;
 }
 @property (nonatomic) UIImageView * imgView;
 @property (nonatomic) UIView * contentView;
@@ -54,9 +56,9 @@
     self.delayTime = 0;
     [self setBgcolor:[UIColor colorWithRed:239.0f/255.0f green:239.0f/255.0f blue:244.0f/255.0f alpha:1.0f] style:KTSwitchViewStyle_Default|KTSwitchViewStyle_Selected];
     [self setTextColor:[UIColor blackColor] style:KTSwitchViewStyle_Default|KTSwitchViewStyle_Selected];
-    [self setContentText:@"关" style:KTSwitchViewStyle_Default];
-    [self setContentText:@"开" style:KTSwitchViewStyle_Selected];
-    
+//    [self setContentText:@"关" style:KTSwitchViewStyle_Default];
+//    [self setContentText:@"开" style:KTSwitchViewStyle_Selected];
+    self.imgView.backgroundColor = [UIColor orangeColor];
     [self addSubview:self.contentView];
     [self.contentView addSubview:self.contentLab];
     [self addSubview:self.selected_contentView];
@@ -76,19 +78,6 @@
     }
     
     self.selected =!self.selected;
-    
-    if ([self.delegate respondsToSelector:@selector(KTSwichViewDidChange:)]) {
-        [self.delegate KTSwichViewDidChange:self];
-    }
-    
-    if (self.delayTime > 0) {
-        //取消之前的操作
-        [self.queue cancelAllOperations];
-        KTSwitchViewDelayOperation * operation = [KTSwitchViewDelayOperation delayTime:self.delayTime finishBlock:^{
-            [self callDelayDelegate];
-        }];
-        [self.queue addOperation:operation];
-    }
 
 }
 
@@ -104,6 +93,20 @@
 - (void)setSelected:(BOOL)selected {
 
     _selected = selected;
+    
+    
+    if ([self.delegate respondsToSelector:@selector(KTSwichViewDidChange:)]) {
+        [self.delegate KTSwichViewDidChange:self];
+    }
+    
+    if (self.delayTime > 0) {
+        //取消之前的操作
+        [self.queue cancelAllOperations];
+        KTSwitchViewDelayOperation * operation = [KTSwitchViewDelayOperation delayTime:self.delayTime finishBlock:^{
+            [self callDelayDelegate];
+        }];
+        [self.queue addOperation:operation];
+    }
 
     [self setNeedsUpdateConstraints];
     [self updateConstraintsIfNeeded];
@@ -124,7 +127,7 @@
         }];
     }
     
-    static dispatch_once_t onceToken;
+
     if (onceToken != 0 && self.frame.size.width) {
         [UIView animateWithDuration:0.3 animations:^{
             [self layoutIfNeeded];
@@ -204,21 +207,20 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     [self setCornerRadius:self.frame.size.height/2];
-    static float width;
     
-    if (self.frame.size.width != width) {
+    if (self.frame.size.width != _width) {
         CGFloat height = self.frame.size.height;
-        width =self.frame.size.width;
+        _width =self.frame.size.width;
         [self.contentView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(self);
             make.right.mas_equalTo(self.imgView.mas_left).offset(height/2);
             make.height.equalTo(self);
-            make.width.mas_equalTo(width);
+            make.width.mas_equalTo(_width);
         }];
         
         [self.contentLab mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(self.contentView);
-            make.width.mas_equalTo(width - height*1.5);
+            make.width.mas_equalTo(_width - height*1.5);
             make.centerX.equalTo(self.contentView).offset(height/4);
         }];
         

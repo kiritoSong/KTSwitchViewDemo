@@ -24,6 +24,7 @@
     [self c1];
     [self c2];
     [self c3];
+    [self c4];
 }
 
 - (void)c1 {
@@ -61,6 +62,10 @@
         make.width.mas_equalTo(300);
         make.height.mas_equalTo(50);
     }];
+    
+    [switchView setContentText:@"关" style:KTSwitchViewStyle_Default];
+    [switchView setContentText:@"开" style:KTSwitchViewStyle_Selected];
+    
     [switchView setImage:[UIImage imageNamed:@"mine_timeorder_unlock.png"] style:KTSwitchViewStyle_Selected];
     [switchView setImage:[UIImage imageNamed:@"mine_timeorder_lock.png"] style:KTSwitchViewStyle_Default];
     [switchView setBgcolor:[UIColor orangeColor] style:KTSwitchViewStyle_Selected];
@@ -72,7 +77,7 @@
 
 - (void)c3 {
     KTSwitchView * switchView = [KTSwitchView new];
-    switchView.tag = 2;
+    switchView.tag = 3;
     [self.view addSubview:switchView];
     
     [switchView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -90,21 +95,44 @@
     
 }
 
+- (void)c4 {
+    KTSwitchView * switchView = [KTSwitchView new];
+    switchView.tag = 4;
+    [self.view addSubview:switchView];
+    
+    [switchView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(self.view).offset(500);
+        make.width.mas_equalTo(70);
+        make.height.mas_equalTo(40);
+    }];
+
+    [switchView setBgcolor:[UIColor magentaColor] style:KTSwitchViewStyle_Selected];
+    
+
+    
+}
+
 -(void)KTSwichViewDidChange:(KTSwitchView *)swichView {
     NSLog(@"%zd号点击---状态“%@”",swichView.tag,swichView.selected?@"开":@"关");
 }
 
 -(void)KTSwichViewDidDelayChange:(KTSwitchView *)swichView {
-
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"%zd号延迟回调---状态”%@“",swichView.tag,swichView.selected?@"开":@"关"] preferredStyle:UIAlertControllerStyleAlert];
-
-    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-    }];
+    static int a = 0;
+    if (swichView.tag == 2 && a != 0) {
+        //第一次不弹框、因为是我手动设置的
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"%zd号延迟回调---状态”%@“",swichView.tag,swichView.selected?@"开":@"关"] preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        }];
+        
+        
+        [alert addAction:action1];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    a ++;
     
-
-    [alert addAction:action1];
-
-    [self presentViewController:alert animated:YES completion:nil];
 }
 
 
