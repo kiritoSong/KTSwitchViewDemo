@@ -16,6 +16,8 @@
     NSString * _contentText;
     UIImage * _selected_img;
     UIImage * _img;
+    UIColor * _selected_imgColor;
+    UIColor * _imgColor;
     UIColor * _selected_textColor;
     UIColor * _textColor;
     float _width;
@@ -58,7 +60,7 @@
     [self setTextColor:[UIColor blackColor] style:KTSwitchViewStyle_Default|KTSwitchViewStyle_Selected];
 //    [self setContentText:@"关" style:KTSwitchViewStyle_Default];
 //    [self setContentText:@"开" style:KTSwitchViewStyle_Selected];
-    self.imgView.backgroundColor = [UIColor orangeColor];
+    [self setImageBgColor:[UIColor orangeColor] style:KTSwitchViewStyle_Default|KTSwitchViewStyle_Selected];
     [self addSubview:self.contentView];
     [self.contentView addSubview:self.contentLab];
     [self addSubview:self.selected_contentView];
@@ -111,15 +113,30 @@
     [self setNeedsUpdateConstraints];
     [self updateConstraintsIfNeeded];
     if (selected) {
-        self.imgView.image = _selected_img;
+        if (_selected_img) {
+            if (_selected_img != self.imgView.image) {
+                self.imgView.image = _selected_img;
+            }
+        }else {
+            self.imgView.image = nil;
+            self.imgView.backgroundColor = _selected_imgColor;
+        }
+        
         [self.imgView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self);
             make.centerY.equalTo(self);
             make.width.height.mas_equalTo(self.mas_height);
         }];
     }else {
-
-        self.imgView.image = _img;
+        if (_img) {
+            if (_img != self.imgView.image) {
+                self.imgView.image = _img;
+            }
+        }else {
+            self.imgView.image = nil;
+            self.imgView.backgroundColor = _imgColor;
+        }
+        
         [self.imgView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self);
             make.centerY.equalTo(self);
@@ -187,6 +204,26 @@
         self.imgView.image = _selected_img;
     }else {
         self.imgView.image = _img;
+    }
+}
+
+- (void)setImageBgColor:(UIColor *)color style:(KTSwitchViewStyle)style {
+    if (style & KTSwitchViewStyle_Default) {
+        _imgColor = color;
+    }
+    
+    if (style & KTSwitchViewStyle_Selected) {
+        _selected_imgColor = color;
+    }
+    
+    if (self.selected) {
+        if (!_selected_img) {
+            self.imgView.backgroundColor = color;
+        }
+    }else {
+        if (!_img) {
+            self.imgView.backgroundColor = color;
+        }
     }
 }
 

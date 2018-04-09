@@ -46,6 +46,7 @@ typedef NS_OPTIONS(NSUInteger, KTSwitchViewStyle) {
 - (void)setContentText:(NSString *)contentText style:(KTSwitchViewStyle)style;
 - (void)setTextColor:(UIColor *)textColor style:(KTSwitchViewStyle)style;
 - (void)setImage:(UIImage *)img style:(KTSwitchViewStyle)style;
+- (void)setImageBgColor:(UIColor *)color style:(KTSwitchViewStyle)style;
 - (void)setBgcolor:(UIColor *)bgcolor style:(KTSwitchViewStyle)style;
 
 @end
