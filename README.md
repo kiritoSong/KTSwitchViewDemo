@@ -61,6 +61,7 @@ typedef NS_OPTIONS(NSUInteger, KTSwitchViewStyle) {
 - (void)setBgcolor:(UIColor *)bgcolor style:(KTSwitchViewStyle)style;
 
 @end
+
 ```
 
 
